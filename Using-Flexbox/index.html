@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/main.css">
+        <title>Using Flexbox and Pseudo Classes</title>
+    </head>
+    <body>
+        <h1>Understanding Flex and Pseudo Classes in html</h1>
+        <h6>Through this page I am hoping you can understand the importants of Flex and pseudo classes.</h6>
+        <h2> - Orriginal flex - </h2>
+        <h4>
+            Right there is one with and without the flex attribute while looking at it you can see <br>
+            a clear difference between the two. With the placeholder for both are in differnt formation <br>
+            and they are shfted to the left.
+        </h4>
+        <h4>The one with the flex attribute</h4>
+        <div id="flex-example-1">
+            <div>place holder 1</div>
+            <div>place holder 2</div>
+            <div>place holder 3</div>
+        </div>
+        <h4>The one without the flex attribute</h4>
+        <div id="nonflex-example-1">
+            <div>place holder 1</div>
+            <div>place holder 2</div>
+            <div>place holder 3</div>
+        </div>
+        <h4>The difference in code</h4>
+        <h5> 
+            Here is the code for the html part of the code this code is similer to both html in flex and non-flex<br>
+    <div id="code-example">
+        < div id="nonflex-example-1">
+            <div>place holder 1</div>
+            <div>place holder 2</div>
+            <div>place holder 3</div>
+        < /div>
+    </div><br>
+            So right here is the code for the normal non-flex Place holder in the css.<br>
+    <div id="code-example">
+        #nonflex-example-1{<br>
+            height: 100px;<br>
+            background-color:#F9ADA0;<br>
+            padding: 5px;<br>
+        }<br><br>
+        #nonflex-example-1 > div{<br>
+            margin: 0px;<br>
+            background-color: #F9627D;<br>
+        }<br>
+    </div>
+            Then here is the code for a flex place holder in the css.
+    <div id="code-example">
+        #flex-example-1{<br>
+            display: flex;<br>
+            height: 100px;<br>
+            background-color:#F9ADA0;<br>
+            padding: 5px;<br>
+        }<br><br>
+        #flex-example-1 > div{<br>
+            margin: 10px;<br>
+            background-color: #F9627D;<br>
+        }<br>
+    </div>
+        So in this code you can see a differences and that is the <strong>display: flex;</strong>.<br>
+        Witch alows a coder to put there div into a horzontal line across the screne and puts each <br>
+        one of the div's. Into there own seperat  boxes that can help you organize the amount of <br>
+        text you want with in your div with a border. Though this the very basic form that you can <br>
+        use flex for ther is so many other ways on using it.<br>
+        
+        </h5><br><br><br>
+
+
+
+        <h2> - Orriginal flex with Basis/direction -</h2>
+        <h4>
+           Now that you know what a flex does for your screen you can now costumise on what<br>
+           you want your flex to look like personaly I think a good one to start with is <br>
+           flex with Basis and directions which alows the person make the size of the flex <br>
+           the way they want it with Basis and then there is direction which puts your flex in <br>
+           in a column
+        </h4>
+        <h4>What heppens if you add direction</h4>
+        <div class="flex-direction" id="flex-example-2">
+            <div>place holder 1</div>
+            <div>place holder 2</div>
+            <div>place holder 3</div>
+        </div>
+    
+        <h4>What heppens if you add basis</h4>
+        <div class="flex-basis" id="flex-example-3">
+            <div style="flex-basis: 240px">place holder 1</div>
+            <div style="flex-basis: 160px">place holder 2</div>
+            <div style="flex-basis: 80px">place holder 3</div>
+        </div>
+        
+        <h4>what the code looks like</h4>
+        <h5> 
+        This is the code in the html</div><br>
+            <div id="code-example">
+            < div class="flex-direction" id="flex-example-2"><br>
+                < div>place holder 1< /div><br>
+                < div>place holder 2< /div><br>
+                < div>place holder 3< /div><br>
+            < /div><br><br>
+            < div class="flex-basis" id="flex-example-3"><br>
+                < div style="flex-basis: 240px">place holder 1< /div><br>
+                < div style="flex-basis: 160px">place holder 2< /div><br>
+                < div style="flex-basis: 80px">place holder 3< /div><br>
+            < /div>
+            </div><br>
+        CSS code for Dirction
+            <div id="code-example">
+                #flex-example-2{<br>
+                    display: flex;<br>
+                    height: 100px;<br>
+                    background-color:#F9ADA0;<br>
+                    padding: 5px;<br>
+                    flex-direction:column;<br>
+                }<br>
+                #flex-example-2 > div{<br>
+                    margin: 10px;<br>
+                    background-color: #F9627D;<br>
+                    width: 100px;<br>
+                }<br><br><br>
+            </div>
+        CSS code for Basis
+            <div id="code-example">
+                #flex-example-3{<br>
+                    display: flex;<br>
+                    height: 100px;<br>
+                    background-color:#F9ADA0;<br>
+                    padding: 5px;<br>
+                }<br>
+                #flex-example-3 > div{<br>
+                    margin: 10px;<br>
+                    background-color: #F9627D;<br>
+                    width: 100px;<br>
+                }<br><br>
+            </div>
+        Through the examples given up above it shows for a basis you need to add two<br>
+        different things in the html and that is with in your first div you need to <br>
+        add class="flex basis" whitch tells the code whitch section of the div's that <br>
+        you want to change the sizes of then with in your second set of divs you need <br>
+        to add style="flex-basis: 80px" whitch alwos you to change it's size. Then we <br>
+        get to the Direction whitch again same thing with the Basis on adding a class <br>
+        but instead you would add class="flex-direction" also within your css you then <br>
+        have to add flex-direction:column; witch turns your div 90 degress to the left <br>
+        and that is Basis and Direction within flex.
+        
+        </h5><br><br><br>
+
+
+
+        <h2> - Orriginal flex with wrap/flow -</h2>
+        <h4>
+           Next I will show you two different flexs that one involve while moving a web page size on your computer. <br>
+           This is shown through one different type of flex wrap. The difference between the two is flex-flow <br>
+           involves putting the amount of div into different colums to help organze the amount of div you want to add.<br>
+            While flex-wrap is in play while moving your page the amount of div will try there best to fit in makes <br>
+            sence while testing it <br>
+        </h4>
+        <h4>What heppens if you add flow</h4>
+        <div class="flex-container" id="flex-example-4">
+            <div>place holder 1</div>
+            <div>place holder 2</div>
+            <div>place holder 3</div>
+            <div>place holder 4</div>
+            <div>place holder 5</div>
+            <div>place holder 6</div>
+            <div>place holder 7</div>
+            <div>place holder 8</div>
+            <div>place holder 9</div>
+        </div>
+        <h4>What heppens if you add wrap</h4>
+        <div class="flex-wrap">
+            <div>place holder 1</div>
+            <div>place holder 2</div>
+            <div>place holder 3</div>
+            <div>place holder 4</div>
+            <div>place holder 5</div>
+            <div>place holder 6</div>
+            <div>place holder 7</div>
+            <div>place holder 8</div>
+            <div>place holder 9</div>
+        </div>
+        
+        <h4>what the code looks like</h4>
+        <h5> 
+        This is the code in the html<br>
+            <div id="code-example">
+                < div class="flex-container" id="flex-example-4"><br>
+                    < div>place holder 1< /div><br>
+                    < div>place holder 2< /div><br>
+                    < div>place holder 3< /div><br>
+                    < div>place holder 4< /div><br>
+                    < div>place holder 5< /div><br>
+                    < div>place holder 6< /div><br>
+                    < div>place holder 7< /div><br>
+                    < div>place holder 8< /div><br>
+                    < div>place holder 9< /div><br>
+                    < /div><br><br>
+                    < div class="flex-wrap"><br>
+                    < div>place holder 1< /div><br>
+                    < div>place holder 2< /div><br>
+                    < div>place holder 3< /div><br>
+                    < div>place holder 4< /div><br>
+                    < div>place holder 5< /div><br>
+                    < div>place holder 6< /div><br>
+                    < div>place holder 7< /div><br>
+                    < div>place holder 8< /div><br>
+                    < div>place holder 9< /div><br>
+                < /div>
+            </div><br><br>
+        CSS code for wrap
+            <div id="code-example">
+                .flex-wrap{<br>
+                    display: flex;<br>
+                    background-color:#F9ADA0;<br>
+                    padding: 5px;<br>
+                    flex-wrap:wrap;<br>
+                    height: 10vh;<br>
+                }<br><br>
+                .flex-wrap > div{<br>
+                    margin: 10px;<br>
+                    background-color: #F9627D;<br>
+                    width: 100px;<br>
+                    text-align:center;<br>
+                    line-height:25px;<br>
+                    font-size:15px; <br>
+                }<br>
+            </div><br>
+        CSS code for flow
+            <div id="code-example">
+                #flex-example-4{<br>
+                    display: flex;<br>
+                    height: 10vh;<br>
+                    background-color:#F9ADA0;<br>
+                    padding: 5px;<br>
+                    flex-flow: column wrap;<br>
+                }<br><br>
+                #flex-example-4 > div{<br>
+                    margin: 10px;<br>
+                    background-color: #F9627D;<br>
+                    width: 100px;<br>
+                }<br><br>
+            </div><br>
+            So what you can see here is for one that both the flow and the wrap both need a class <br>
+            but you can see that you also do not need an id unless you want to specify that specific wrap<br>
+            Another thing either a flex-wrap:wrap; for the wrap or you need to add flex-flow: column wrap; <br>
+            for a flex-flow aditionail make sure to cheak your width to make things work the way you want them to. <br>
+        </h5><br><br><br>
+
+
+
+        <h2>Other types of flexs options</h2>
+        <h5>
+            One of these options is with flex direction some of these options are <br>
+            column whitch was shown upabove, row-reverse, and center.
+            <div id="code-example">
+                here is flex row-reverse
+                <div class="flex-direction" id="flex-example-5">
+                    <div>place holder 1</div>
+                    <div>place holder 2</div>
+                    <div>place holder 3</div>
+                </div>
+            </div>
+            <div id="code-example">
+                here is flex column-reverse
+                <div class="flex-direction" id="flex-example-6">
+                    <div>place holder 1</div>
+                    <div>place holder 2</div>
+                    <div>place holder 3</div>
+                </div>
+            </div>
+            Now there are a lot of other stuff that you can do but that is what I will show.<br>
+            and to do this is quit simple just add the two pieces of code to your css flex-direction
+        </h5><br><br><br>
+
+
+        
+        <h2>Big flex box</h2>
+        <div id="code-example">
+            <div class="flex-direction" id="flex-example-7">
+                <div>place holder 1</div>
+            </div>
+        </div><br><br><br>
+
+
+
+        <h2>Pseudo-classes</h2>
+        <h5>
+            <div id="pseudo-class">
+                <ol>
+                    <li><p><b><a href="https://example.com" target="_blank">this is a pseudo-class 1</a></b></p></li>
+                    <li><p><b><a href="https://example.com" target="_blank">this is a pseudo-class 2</a></b></p></li>
+                    <li><p><b><a href="https://example.com" target="_blank">this is a pseudo-class 3</a></b></p></li>
+                    <li><p><b><a href="https://example.com" target="_blank">this is a pseudo-class 4</a></b></p></li>
+                    <li><p><b><a href="https://example.com" target="_blank">this is a pseudo-class 5</a></b></p></li>
+                    <li><p><b><a href="https://example.com" target="_blank">this is a pseudo-class 6</a></b></p></li>
+                </ol>
+            </div>
+                So in here is the Pseudo-classes which allow the coder costimise there links the basic ones you could use are<br>
+                a:link, a:visited, li:hover, a:active, li:nth-child(odd), li:first-child, li:last-child. Each one of these link does a different<br>
+                thing for example the first and last child links alow you high light the first and last list iteam in your list comand then we have
+                nth-child which alows the user around the () to plug in a number and that number and it will aonly affect that iteam or you could put odd 
+                so you could only have to target every odd number. Next is the hover command which your mouse is over the link it will high light it self
+                or what ever you want hover to do. Now we got link and active which do similer things with link the link in your code will high light in 
+                a color you want and visited is when you go into the and then come back your link could change color and again you can do what you want with 
+                in this but background color is the most common and finally active which when you press the link it will change color or what you want.
+        </h5>
+        <h2>Here is the cod for pseudo-class</h2>
+        <h5>
+        here are all the css code 
+        <div id="code-example">
+            a:link{<br>
+                color:#5B3758;<br>
+            }<br><br>
+            a:visited{<br>
+                color:#83B692;<br>
+            }<br><br>
+            li :hover{<br>
+                color:#F9627D;<br>
+                background-color:yellow;<br>
+            }<br><br>
+            a:active{<br>
+                color:#BEB299;<br>
+            }<br><br>
+            li:nth-child(odd){<br>
+                background:#f9888f<br>
+            }<br><br>
+            li:first-child{<br>
+                background:#aa4d6b<br>
+            }<br><br>
+            li:last-child{<br>
+                background:#f97581<br>
+            }<br><br>
+            </div>
+
+        Here is the html code
+        <div id="code-example">
+        < div id="pseudo-class"><br>
+            < ol><br>
+                < li>< p>< b>< a href="https://example.com" target="_blank">this is a pseudo-class 1< /a>< /b>< /p>< /li><br>
+                < li>< p>< b>< a href="https://example.com" target="_blank">this is a pseudo-class 2< /a>< /b>< /p>< /li><br>
+                < li>< p>< b>< a href="https://example.com" target="_blank">this is a pseudo-class 3< /a>< /b>< /p>< /li><br>
+                < li>< p>< b>< a href="https://example.com" target="_blank">this is a pseudo-class 4< /a>< /b>< /p>< /li><br>
+                < li>< p>< b>< a href="https://example.com" target="_blank">this is a pseudo-class 5< /a>< /b>< /p>< /li><br>
+                < li>< p>< b>< a href="https://example.com" target="_blank">this is a pseudo-class 6< /a>< /b>< /p>< /li><br>
+            < /ol><br>
+        </div>
+        </h5>
+    </body>
+</html>
